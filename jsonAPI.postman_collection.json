@@ -1,0 +1,234 @@
+{
+	"info": {
+		"_postman_id": "5dabd4f5-bfa3-4c32-878c-d9e7d4a0c404",
+		"name": "jsonAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Entity Request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{domain}}/jsonapi/node/article/45bbf358-d440-48e1-9eb4-e7659ab544cd",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"jsonapi",
+						"node",
+						"article",
+						"45bbf358-d440-48e1-9eb4-e7659ab544cd"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Collection",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{domain}}/jsonapi/node/article",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"jsonapi",
+						"node",
+						"article"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Filter",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{domain}}/jsonapi/node/article?filter[titleFilter][condition][path]=title&filter[titleFilter][condition][value]=Abbas Illum Nunc Os",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"jsonapi",
+						"node",
+						"article"
+					],
+					"query": [
+						{
+							"key": "filter[titleFilter][condition][path]",
+							"value": "title"
+						},
+						{
+							"key": "filter[titleFilter][condition][value]",
+							"value": "Abbas Illum Nunc Os"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Fieldset",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{domain}}/jsonapi/node/article?filter[titleFilter][condition][path]=title&filter[titleFilter][condition][value]=Abbas Illum Nunc Os&fields[node--article]=title,reference,field_image",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"jsonapi",
+						"node",
+						"article"
+					],
+					"query": [
+						{
+							"key": "filter[titleFilter][condition][path]",
+							"value": "title"
+						},
+						{
+							"key": "filter[titleFilter][condition][value]",
+							"value": "Abbas Illum Nunc Os"
+						},
+						{
+							"key": "fields[node--article]",
+							"value": "title,reference,field_image"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Includes (Single field from reference)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{domain}}/jsonapi/node/article?filter[titleFilter][condition][path]=title&filter[titleFilter][condition][value]=Abbas Illum Nunc Os&fields[node--article]=title,reference,field_image&include=reference,reference.input_field,field_image&fields[paragraph--references]=title&fields[paragraph--field_paragraph]=text_field",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"jsonapi",
+						"node",
+						"article"
+					],
+					"query": [
+						{
+							"key": "filter[titleFilter][condition][path]",
+							"value": "title"
+						},
+						{
+							"key": "filter[titleFilter][condition][value]",
+							"value": "Abbas Illum Nunc Os"
+						},
+						{
+							"key": "fields[node--article]",
+							"value": "title,reference,field_image"
+						},
+						{
+							"key": "include",
+							"value": "reference,reference.input_field,field_image"
+						},
+						{
+							"key": "fields[paragraph--references]",
+							"value": "title"
+						},
+						{
+							"key": "fields[paragraph--field_paragraph]",
+							"value": "text_field"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Includes (Whole entity from reference)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{domain}}/jsonapi/node/article?filter[titleFilter][condition][path]=title&filter[titleFilter][condition][value]=Abbas Illum Nunc Os&fields[node--article]=title,reference,field_image&include=reference,reference.input_field",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"jsonapi",
+						"node",
+						"article"
+					],
+					"query": [
+						{
+							"key": "filter[titleFilter][condition][path]",
+							"value": "title"
+						},
+						{
+							"key": "filter[titleFilter][condition][value]",
+							"value": "Abbas Illum Nunc Os"
+						},
+						{
+							"key": "fields[node--article]",
+							"value": "title,reference,field_image"
+						},
+						{
+							"key": "include",
+							"value": "reference,reference.input_field"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Menu Request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{domain}}/jsonapi/node/article?filter[titleFilter][condition][path]=title&filter[titleFilter][condition][value]=Abbas Illum Nunc Os&fields[node--article]=title,reference,field_image&include=reference,reference.input_field",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"jsonapi",
+						"node",
+						"article"
+					],
+					"query": [
+						{
+							"key": "filter[titleFilter][condition][path]",
+							"value": "title"
+						},
+						{
+							"key": "filter[titleFilter][condition][value]",
+							"value": "Abbas Illum Nunc Os"
+						},
+						{
+							"key": "fields[node--article]",
+							"value": "title,reference,field_image"
+						},
+						{
+							"key": "include",
+							"value": "reference,reference.input_field"
+						},
+						{
+							"key": "fields[paragraph--references]",
+							"value": "title",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
