@@ -14,7 +14,7 @@ export default function GetStaticPropsRevalidatePage(props) {
 
 export async function getStaticProps() {
   const resp = await fetch(
-    'http://localhost:49175/jsonapi/node/article/45bbf358-d440-48e1-9eb4-e7659ab544cd'
+    `${process.env.API_URL}/jsonapi/node/article/45bbf358-d440-48e1-9eb4-e7659ab544cd`
   )
   const items = await resp.json()
 

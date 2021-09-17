@@ -44,6 +44,11 @@ const Menu = () => (
                 </Link>
               </li>
               <li className="nav-item">
+                <Link href="/getServerSideProps">
+                  <a className="nav-link">Get Server Side Props</a>
+                </Link>
+              </li>
+              <li className="nav-item">
                 <Link href="/getStaticProps">
                   <a className="nav-link">Get Static Props</a>
                 </Link>
@@ -51,11 +56,6 @@ const Menu = () => (
               <li className="nav-item">
                 <Link href="/getStaticProps-revalidate">
                   <a className="nav-link">Get Static Props Revalidate</a>
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link href="/getServerSideProps">
-                  <a className="nav-link">Get Server Side Props</a>
                 </Link>
               </li>
             </ul>
